@@ -1,0 +1,45 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-networking-bluetooth": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    }
+  },
+  "dependent_plugins": {}
+}

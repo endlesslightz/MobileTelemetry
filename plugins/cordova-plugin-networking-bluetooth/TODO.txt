@@ -1,0 +1,11 @@
+Nice to have features in the future that are not essential:
+- Implement the setName method for changing the friendly name, and report the
+  name changes (ACTION_LOCAL_NAME_CHANGED) to the onAdapterStateChanged event.
+- On the deviceInfo objects, it would be nice to perform a service discovery
+  (on Android: fetchUuidsWithSdp), in order to have a reilable uuids array
+- On the deviceInfo objects it can be useful to show the DeviceClass
+- Chrome implements the getInfo and getSockets functions in order to have more
+  information about the sockets.
+  If these functions will be implemented in cordova-plugin-networking-bluetooth,
+  they will not necessarily have all the fields of the Chrome SocketInfo object.
+

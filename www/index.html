@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>nativeDroid - Theme for jQuery Mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+<link rel="stylesheet" href="css/mystyles.css" />
+
+<!-- jQuery / jQueryMobile Scripts -->
+<script src="cordova.js"></script>
+<script src="js/koneksi.js"></script> 
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme='b'>
+    <div data-role="content">   
+        <center><img class="logo" src='img/sartika.jpg'>
+        <h1>Mobile Telemetry Data Monitoring</h1></center>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="fieldcontain">
+                    <input type="text" name="username" id="username" data-clear-btn="true" placeholder="Username">
+                </li>
+                <li data-role="fieldcontain">
+                    <input type="password" name="password" id="password" data-clear-btn="true" placeholder="Password">
+                </li>
+                <li><center><button id="login_submit" onclick="login()"><i class='lIcon fa fa-check'></i>Log in</button></center></li>
+            </ul>
+    </div>
+</div>
+
+</body>
+</html>

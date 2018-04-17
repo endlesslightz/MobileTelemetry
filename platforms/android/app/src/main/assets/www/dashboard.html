@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Mobile Telemetri</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- <link rel="stylesheet" href="css/cuaca/css/weather-icons.css" /> -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+        <!-- <link rel="stylesheet" href="css/cuaca/css/weather-icons.min.css"> -->
+        <link rel="stylesheet" href="css/mystyles.css" />
+
+        <!-- jQuery / jQueryMobile Scripts -->
+        <!--<script src="js/permission.js"></script>-->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places&key=AIzaSyCb6n5tFUJupfGKzMErKQr9TnHnqCRC5co"></script> 
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <script src="cordova.js"></script> 
+    </head>
+    <body>
+        <div data-role="page" data-theme='b'>
+            <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+            </div>
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+                <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+                <h1> Mobile Telemetri</h1>
+            </div>
+            <div data-role="content">   
+                <ul data-nativedroid-plugin='cards'>
+                    <li data-cards-type='weather'>
+                        <h1 id="daerah">Indonesia</h1>
+                        <!-- <h2>Sulawesi Utara, Indonesia</h2> -->
+                        <ul class='detail'>
+                            <li><div id="iconcuaca" class='wi wi-day-sunny'></div>
+                                <span id="cuaca">tidak tersedia</span>
+                                <span id="angin">0 Km/jam<i class='fa fa-fire'></i></span>
+                            </li>
+                            <li><span id="suhu">&deg;</span> </li>
+                            <li><button onclick="updateLokasi()">Update Lokasi</button></li>
+                        </ul>
+                    </li>
+                    <li data-cards-type='sports'>
+                        <h2>STATUS</h2>
+                        <h1><div id="ajax"></div></h1>
+                        <span id="coba"></span>
+                    </li>
+                </ul>
+                <script src="js/navigasi.js"></script>   
+                <script src="js/lokasi.js"></script>    
+                <script src="js/nativedroid.script.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Mobile Telemetri",
+  "short_name": "Mobile Telemetri",
+  "version": "com.sartika.telemetri3",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": "Nurcahya @ Sartika Mitrasejati",
+  "icons": [],
+  "start_url": "index.html"
+}

@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-networking-bluetooth",
+        "scope": null,
+        "escapedName": "cordova-plugin-networking-bluetooth",
+        "name": "cordova-plugin-networking-bluetooth",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\code\\cordova\\baddoka3"
+    ]
+  ],
+  "_from": "cordova-plugin-networking-bluetooth@latest",
+  "_id": "cordova-plugin-networking-bluetooth@1.0.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-networking-bluetooth",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-networking-bluetooth-1.0.3.tgz_1478358755854_0.06272331974469125"
+  },
+  "_npmUser": {
+    "name": "bugnano",
+    "email": "franco@bugnano.it"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-networking-bluetooth",
+    "scope": null,
+    "escapedName": "cordova-plugin-networking-bluetooth",
+    "name": "cordova-plugin-networking-bluetooth",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-networking-bluetooth/-/cordova-plugin-networking-bluetooth-1.0.3.tgz",
+  "_shasum": "1677d100f0b5df529858f9b8a310c3f75bde846d",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-networking-bluetooth",
+  "_where": "C:\\code\\cordova\\baddoka3",
+  "author": {
+    "name": "Franco Bugnano"
+  },
+  "cordova": {
+    "id": "cordova-plugin-networking-bluetooth",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Bluetooth Networking Plugin for Cordova",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "1677d100f0b5df529858f9b8a310c3f75bde846d",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-networking-bluetooth/-/cordova-plugin-networking-bluetooth-1.0.3.tgz"
+  },
+  "homepage": "https://bitbucket.org/bugnano/cordova-plugin-networking-bluetooth#readme",
+  "keywords": [
+    "cordova",
+    "bluetooth",
+    "network",
+    "networking",
+    "rfcomm",
+    "socket",
+    "client",
+    "server",
+    "peer",
+    "p2p",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "bugnano",
+      "email": "franco@bugnano.it"
+    }
+  ],
+  "name": "cordova-plugin-networking-bluetooth",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "hg",
+    "url": "git+https://bitbucket.org/bugnano/cordova-plugin-networking-bluetooth.git"
+  },
+  "scripts": {},
+  "version": "1.0.3"
+}

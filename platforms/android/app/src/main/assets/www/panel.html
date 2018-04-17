@@ -1,0 +1,25 @@
+<div class="profile-box">
+    <div class="pic">
+        <img src="img/user.png">
+    </div>
+    <div class="info">
+        <h3 id="nama"></h3>
+        <p><i class='fa fa-building-o'></i><span id="pos">Sartika Mitrasejati</span></p>
+        <p><i class='fa fa-compass'></i>Indonesia</p>
+    </div>
+</div>
+
+<ul class="nav-menu" data-role="listview">
+    <li>Navigasi</li>
+    <li data-icon='false'><a onclick="dashboard()" data-transition="slide"><i class='lIcon fa fa-home'></i>Dashboard</a></li>
+    <li data-icon='false'><a onclick="request()" data-transition="slide"><i class='lIcon fa fa-inbox'></i>Kirim/Minta Data</a></li>
+    <li data-icon='false'><a onclick="kalender()" data-transition="slide"><i class='lIcon fa fa-calendar'></i>Kalender</a></li>
+    <!-- <li data-icon='false'><a href="getcity.html" data-transition="slide"><i class='lIcon fa fa-file'></i>Kota</a></li> -->
+    <li data-icon='false'><a onclick="riwayat()" data-transition="slide"><i class='lIcon fa fa-file'></i>Riwayat</a></li>
+    <li data-icon='false'><a onclick="user()" data-transition="slide"><i class='lIcon fa fa-group'></i>User</a></li>
+    <li data-icon='false'><a onclick="keluar()" data-transition="slide"><i class='lIcon fa fa-sign-out'></i>Exit</a></li>
+    
+</ul>
+<script>
+    $( ".nav-menu" ).listview();
+</script>
