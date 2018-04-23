@@ -17,7 +17,7 @@ transaction.executeSql('CREATE TABLE IF NOT EXISTS user (id integer primary key,
 function initDataTable() {
 myDB=window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
 myDB.transaction(function(transaction) {
-transaction.executeSql('CREATE TABLE IF NOT EXISTS data ( id integer primary key , nilai double, pos varchar(100), waktu datetime)', [],
+transaction.executeSql('CREATE TABLE IF NOT EXISTS data ( id integer primary key , nilai double, pos varchar(100), waktu datetime, status varchar(50))', [],
 	function(tx, result) {
 		// alert("Table created successfully");
 	},

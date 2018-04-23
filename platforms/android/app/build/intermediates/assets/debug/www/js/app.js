@@ -1,5 +1,7 @@
 var myDB = null;
 var GG = null;
+var dataCH=null;
+
 $(document).on('pagebeforeshow', '[data-role="page"]', function(){       
     $.mobile.activePage.find('[data-role="panel"]').load("panel.html", function(){ 
         $(this).parent().trigger('pagecreate');
@@ -85,7 +87,8 @@ function getReq(){
  var tgl = tanggal();
   myDB=window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
   myDB.transaction(function(transaction) {
-  transaction.executeSql('INSERT INTO data ( `nilai`, `pos`, `waktu`, `status`) VALUES (?,?,?,?)', ['0.5', '1', tgl, 'pending'], 
+  nilai = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+  transaction.executeSql('INSERT INTO data ( `nilai`, `pos`, `waktu`, `status`) VALUES (?,?,?,?)', [nilai, '1', tgl, 'pending'], 
   function (tx, results) {
     alert('Data berhasil disimpan'); 
   },
@@ -151,35 +154,204 @@ function tanggal(){
     return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
 }
 
+/*------------------------------------------------------------------------*/
+
 function getData(){
     var arraydata = [];
     var url = window.location.pathname;
     var filename = url.substring(url.lastIndexOf('/')+1);
-     if (filename=='riwayat.html'){
+     if (filename=='riwayatCH.html'||filename=='riwayatTMA.html'){
+        getDataCH();
+        getDataTMA();
         myDB=window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
         myDB.transaction(function(transaction) {
-        transaction.executeSql('SELECT * FROM data ORDER BY waktu desc', [], 
-        function (tx, results) {
-        var len = results.rows.length;
+          transaction.executeSql('SELECT * FROM data ORDER BY waktu desc', [], 
+          function (tx, results) {
+          var len = results.rows.length;
+              for (var i=0; i<len; ++i) {
+                  arraydata.push ({id: results.rows.item(i).id, nilai: results.rows.item(i).nilai, status: results.rows.item(i).status, waktu: results.rows.item(i).waktu });
+              } 
+              data = JSON.stringify(arraydata);
+              logs = JSON.parse(data);
+              $table = $("#data-table");
+              for(var i=0; i<logs.length;i++) {
+                var log = logs[i];
+                $table.append("<tr><td>"+log.id+"</td><td>"+log.nilai+"</td><td>"+log.status+"</td><td>"+log.waktu+"</td></tr>")
+              }
+          },
+          function(error) {
+            alert("Ups, terjadi kesalahan pada pengambilan data!");
+            console.log('nama ga update');
+          });
+        });
+    }
+}
 
-        for (var i=0; i<len; ++i) {
-            arraydata.push ({id: results.rows.item(i).id, nilai: results.rows.item(i).nilai, status: results.rows.item(i).status, waktu: results.rows.item(i).waktu });
-        } 
-            data2 = JSON.stringify(arraydata);
-            logs = JSON.parse(data2);
-            $table = $("#data-table");
-            for(var i=0; i<logs.length;i++) {
-              var log = logs[i];
-              $table.append("<tr><td>"+log.id+"</td><td>"+log.nilai+"</td><td>"+log.status+"</td><td>"+log.waktu+"</td></tr>")
+function getDataCH(){
+    var arraydata = [];
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+     if (filename=='riwayatCH.html'){
+        myDB=window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
+        myDB.transaction(function(transaction) {
+        transaction.executeSql('SELECT * FROM data ORDER BY waktu asc', [], 
+        function (tx, results) {
+            var len = results.rows.length;
+            for (var i=0; i<len; ++i) {
+                  arraydata.push ([parseFloat(Date.parse(results.rows.item(i).waktu)),parseFloat(results.rows.item(i).nilai)]);
             }
+            Highcharts.chart('container', {
+            chart: {
+                type: 'column',
+                zoomType:'x'
+            },
+            title: {
+                text: 'Grafik Curah Hujan'
+            },
+            subtitle: {
+                text: document.ontouchstart === undefined ?
+                        'Sentuh dan tarik area grafik untuk memperbesar' :
+                        'Sentuh dan tarik area grafik untuk memperbesar'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Nilai Curah Hujan (mm)'
+                },
+                lineWidth: 2,
+                min: 0
+            },
+            tooltip: {
+                pointFormat: 'Curah Hujan : {point.y:,.0f} mm'
+            },
+            legend: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {x1: 0, y1: 0, x2: 0, y2: 1},
+                        stops: [
+                            [0, Highcharts.getOptions().colors[0]],
+                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                name: 'Curah Hujan',
+                lineWidth: 2,
+                data: arraydata
+            }]
+        }); 
         },
         function(error) {
           alert("Ups, terjadi kesalahan pada pengambilan data!");
           console.log('nama ga update');
         });
-        });
+      });   
     }
 }
+
+
+function getDataTMA(){
+    var arraydata = [];
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+     if (filename=='riwayatTMA.html'){
+        myDB=window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
+        myDB.transaction(function(transaction) {
+        transaction.executeSql('SELECT * FROM data ORDER BY waktu asc', [], 
+        function (tx, results) {
+            var len = results.rows.length;
+            for (var i=0; i<len; ++i) {
+                  arraydata.push ([parseFloat(Date.parse(results.rows.item(i).waktu)),parseFloat(results.rows.item(i).nilai)]);
+            }
+            Highcharts.chart('container', {
+                    chart: {
+                        type: 'area',
+                        zoomType: 'x'
+                    },
+                    title: {
+                        text: 'Grafik Tinggi Muka Air'
+                    },
+                    subtitle: {
+                        text: document.ontouchstart === undefined ?
+                                'Sentuh dan tarik area grafik untuk memperbesar' :
+                                'Pinch the chart to zoom in'
+                    },
+                    xAxis: {
+                        type: 'datetime'
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Nilai Ketinggian (meter)'
+                        },
+                        lineWidth: 2,
+                        min: 0
+                    },
+                    tooltip: {
+                        pointFormat: 'Tinggi Muka Air : {point.y:,.0f} meter'
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        area: {
+                            fillColor: {
+                                linearGradient: {x1: 0, y1: 0, x2: 0, y2: 1},
+                                stops: [
+                                    [0, Highcharts.getOptions().colors[0]],
+                                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                                ]
+                            },
+                            marker: {
+                                radius: 2
+                            },
+                            lineWidth: 1,
+                            states: {
+                                hover: {
+                                    lineWidth: 1
+                                }
+                            },
+                            threshold: null
+                        }
+                    },
+                    series: [{
+                        name: 'Tinggi Muka Air',
+                        lineWidth: 2,
+                        data: arraydata
+                    }]
+                }); 
+        },
+        function(error) {
+          alert("Ups, terjadi kesalahan pada pengambilan data!");
+          console.log('nama ga update');
+        });
+      });   
+    }
+} 
+//------------------------------------------------------------------//
+
+
 //------------------------------------------------------------------//
 
 document.addEventListener("deviceready", onDeviceReady, false);

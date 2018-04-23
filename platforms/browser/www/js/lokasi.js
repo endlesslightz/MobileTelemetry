@@ -369,7 +369,7 @@
 
 
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+    navigator.geolocation.getCurrentPosition(successFunction, errorFunction, {timeout:30000});
 } 
 
 function successFunction(position) {
@@ -381,7 +381,7 @@ function successFunction(position) {
 }
 
 function errorFunction(){
-    alert("Geocoder diaktifkan!");
+    alert("Memuat geolocoder");
 }
 
 
@@ -415,7 +415,7 @@ function codeLatLng(lat, lng) {
       if (status == google.maps.GeocoderStatus.OK) {
       console.log(results)
         if (results[1]) {
-         //formatted address
+         //alamat
           $.getJSON("http://api.openweathermap.org/data/2.5/weather?units=metric&lon="+lng+"&lat="+lat+"&APPID=eb6701c088d5ee37d66b9038e981a1c1",function(json){
               // alert(json[0][0]);
             document.getElementById("cuaca").innerHTML = json["weather"]["0"]["main"];
@@ -424,7 +424,7 @@ function codeLatLng(lat, lng) {
           });
          document.getElementById("daerah").innerHTML = results[0].formatted_address
          // alert(results[0].formatted_address)
-        //find country name
+        //negara
              for (var i=0; i<results[0].address_components.length; i++) {
             for (var b=0;b<results[0].address_components[i].types.length;b++) {
             //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate

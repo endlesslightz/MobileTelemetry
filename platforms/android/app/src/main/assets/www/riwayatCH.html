@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Mobile Telemetri</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+        <link rel="stylesheet" href="css/mystyles.css" />
+
+        <!-- jQuery / jQueryMobile Scripts -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <script src="cordova.js"></script> 
+        <script src="js/highchart/highcharts.js"></script>
+        <script src="js/highchart/modules/exporting.js"></script>
+        <script src="js/highchart/modules/export-data.js"></script>
+ 
+    </head>
+    <body>
+        <div data-role="page" data-theme='b'>
+            <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+            </div>
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+                <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+                <h1> Mobile Telemetri</h1>
+            </div>
+            <div data-role="content">  
+                <!-- <iframe src="CH.html" width="100%" height="350" frameborder="0"></iframe> -->
+                <div id="container" style="min-width: 310px; height: 310px; margin: 0 auto;" ></div>
+
+                 <div class='inset'>
+                    <table id='data-table' data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nilai</th>
+                                <th>Status</th>
+                                <th>Waktu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <script src="js/navigasi.js"></script>   
+                <script src="js/nativedroid.script.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+    </body>
+</html>
