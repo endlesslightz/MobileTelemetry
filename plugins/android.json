@@ -39,6 +39,12 @@
     },
     "cordova-plugin-filepath": {
       "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-base64-to-gallery": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
     }
   },
   "dependent_plugins": {}

@@ -1,0 +1,45 @@
+/* index.css */
+
+div.rect_class {
+    width: 280px;
+    height: 100px;
+
+    /* Make inner part of rectangle transparent */
+    background-color: rgba(255, 255, 255, 0);
+
+    /* Center vertically AND horizontally */
+    position: absolute; /*it can be fixed too*/
+  	left: 0; right: 0;
+  	top: 0; bottom: 0;
+  	margin: auto;
+
+  	/* This to solve "the content will not be cut when the window is smaller than the content": */
+  	max-width: 100%;
+  	max-height: 100%;
+  	overflow: auto;
+
+  	/* COOL BORDER */
+  	border-width: 20px;
+    border-style: solid;
+      /* You need to place border.png into img folder */
+  	border-image: url(../img2/border.png) 50 round;
+
+  	/* SHADOW EFFECT darkens everything outside rectangle */
+  	box-shadow: 0 0 500px 5000px rgba(0, 0, 0, 0.4);
+}
+
+img.flash_class {
+    /* Center horizontally */
+    position: absolute; margin: auto;
+
+    width: 55px; height: 55px;
+    top: 20px; right: 20px;
+}
+
+img.take_pic_class {
+    /* Center horizontally */
+    position: absolute; margin: auto;
+
+    width: 75px; height: 75px;
+    left: 0px; right: 0px; bottom: 20px;
+}

@@ -11,10 +11,10 @@ INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:12:127-181
 manifest
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\7387f103932e57b800a74e0f0524116a\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-v4:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\support-v4-25.4.0.aar\dd8e8376c5ea43ed05fc721d9b83856f\AndroidManifest.xml:17:1-31:12
 MERGED from [:CordovaLib] C:\code\cordova\baddoka3\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
@@ -25,9 +25,9 @@ MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Nurcahya\.grad
 MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.4.0.aar\f918c161fe293314adeec55518b21346\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.4.0.aar\653a7861e61a61e7ba2b72babec3000b\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\c11a9ab2499fdeea48ae2036be9cdbdb\AndroidManifest.xml:17:1-31:12
-INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:2:102-134
 		INJECTED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml
@@ -63,7 +63,7 @@ ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:5:5-15:19
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:5:5-16:19
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\7387f103932e57b800a74e0f0524116a\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\7387f103932e57b800a74e0f0524116a\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\support-v4-25.4.0.aar\dd8e8376c5ea43ed05fc721d9b83856f\AndroidManifest.xml:25:5-29:19
@@ -116,8 +116,16 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
 	android:name
 		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
+activity#com.cordovaplugincamerapreview.CameraActivity
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:15:9-161
+	android:screenOrientation
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:15:80-116
+	android:theme
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:15:117-158
+	android:name
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:15:19-79
 uses-sdk
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:17:5-74
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\7387f103932e57b800a74e0f0524116a\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\7387f103932e57b800a74e0f0524116a\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\support-v4-25.4.0.aar\dd8e8376c5ea43ed05fc721d9b83856f\AndroidManifest.xml:21:5-23:54
@@ -141,41 +149,53 @@ MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Nurcahya\.gradl
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.4.0] C:\Users\Nurcahya\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.4.0.aar\7387f103932e57b800a74e0f0524116a\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:16:42-71
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:17:42-71
 	android:minSdkVersion
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:16:15-41
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:17:15-41
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:17:5-68
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:18:5-68
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:17:22-65
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:18:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:18:5-74
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:19:5-74
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:18:22-71
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:19:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:19:5-81
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:20:5-81
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:19:22-78
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:20:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:20:5-79
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:21:5-79
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:20:22-76
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:21:22-76
 uses-feature#android.hardware.location.gps
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:21:5-66
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:22:5-66
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:21:19-63
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:22:19-63
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:22:5-79
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:22:22-76
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:23:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:23:5-81
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:24:5-81
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:23:22-78
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:24:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:24:5-80
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:25:5-80
 	android:name
-		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:24:22-77
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:25:22-77
+uses-feature#android.hardware.camera
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:26:5-60
+	android:name
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:26:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:27:5-70
+	android:name
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:27:19-67
+uses-permission#android.permission.CAMERA
+ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:28:5-65
+	android:name
+		ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:28:22-62
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from C:\code\cordova\baddoka3\platforms\android\app\src\main\AndroidManifest.xml:13:13-116
 	android:resource

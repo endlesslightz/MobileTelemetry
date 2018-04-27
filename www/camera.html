@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Mobile Telemetri</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+        <link rel="stylesheet" href="css/mystyles.css" />
+        
+        <!-- jQuery / jQueryMobile Scripts -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <script src="cordova.js"></script> 
+    </head>
+    <body>
+        <div data-role="page" data-theme='b'>
+            <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+
+            </div>
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+                <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+                <h1>Mobile Telemetri</h1>
+            </div>
+            <div data-role="content">
+
+                <div class="pictures">
+                  <p><img id="originalPicture" width="200" height="200" /></p>
+                </div>
+
+                  <div class="controls">
+                  <div class="block">
+                  <div id="androidOnly">
+                  <p style="margin-bottom:0px;">
+                    Zoom:
+                    <span id="zoomValue"style="margin: 0 5px;">1</span>
+                    <input type="range" id="zoomSlider" min="1" max="5" value="1" />
+                  </p>
+                </div>
+                    <button id="takePictureButton">Take Picture</button>
+                    <button id="startCameraAboveButton">Nyalakan</button>
+                    <button id="stopCameraButton">Matikan</button>
+                  </div>
+
+                  <div class="block">
+                    <p style="margin-bottom:0px">
+                      Color Effect:
+                      <select id="selectColorEffect">
+                        <option selected value="none">none</option>
+                        <option value="aqua">aqua</option>
+                        <option value="blackboard">blackboard</option>
+                        <option value="mono">mono</option>
+                        <option value="negative">negative</option>
+                        <option value="posterize">posterize</option>
+                        <option value="sepia">sepia</option>
+                        <option value="solarize">solarize</option>
+                        <option value="whiteboard">whiteboard</option>
+                      </select>
+                    </p>
+
+                    <p style="margin-bottom:0px;">
+                      Flash Mode:
+                      <select id="selectFlashMode">
+                        <option selected value="off">off</option>
+                        <option value="on">on</option>
+                        <option value="auto">auto</option>
+                        <option value="torch">torch</option>
+                      </select>
+                    </p>
+
+                  
+                  </div>
+               <!--    <div class="block">
+                    <button id="switchCameraButton">Switch Camera</button>
+                    <button id="changePreviewSize">Change Preview Size</button>
+                  </div> -->
+                </div>  
+            
+
+                <script src="js/camera.js"></script>   
+                <!-- <script src="js/cameraPreview.js"></script>    -->
+                <script src="js/navigasi.js"></script>   
+                <script src="js/nativedroid.script.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+

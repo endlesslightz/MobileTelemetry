@@ -7,6 +7,12 @@
 .profile-box .info h3{font-family: "Roboto", sans-serif;font-weight: 400;margin:0px;}
 .profile-box .info p{text-shadow: 0 0px 0 transparent;font-size:17px;margin:4px;}
 .profile-box .info p i{width:18px;}
+/*.pictures { height:300px; }*/
+
+
+html, body, .ion-app, .ion-content {
+  background-color: transparent !important;
+}
 
 @font-face {
   font-family: 'weathericons';

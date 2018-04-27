@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;style-src * 'unsafe-inline' 'self' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;img-src * data: 'unsafe-inline' 'self' content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css2/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <!-- jQuery for http POST request -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <!-- crop.js contains our crop function -->
+        <script type="text/javascript" src="js2/crop.js"></script>
+        <script type="text/javascript" src="js2/index2.js"></script>
+        <button id = "cameraTakePicture">TAKE PICTURE</button>
+  
+    </body>
+</html>
+
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Mobile Telemetri</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+        <link rel="stylesheet" href="css/mystyles.css" />
+        
+        <!-- jQuery / jQueryMobile Scripts -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <script src="cordova.js"></script> 
+    </head>
+    <body>
+        <div data-role="page" data-theme='b'>
+            <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+
+            </div>
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+                <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+                <h1>Mobile Telemetri</h1>
+            </div>
+            <div data-role="content">
+
+                <div class="pictures">
+                    <center><img id = "myImage" width="200" height="250"></img></center>
+                </div>
+
+                  <div class="controls">
+                  <div class="block">
+                  <div id="androidOnly">
+                  <p style="margin-bottom:0px;">
+                    Zoom:
+                    <span id="zoomValue"style="margin: 0 5px;">1</span>
+                    <input type="range" id="zoomSlider" min="1" max="5" value="1" />
+                  </p>
+                </div>
+                    <button id="cameraTakePicture">Ambil Gambar</button>
+                  </div>
+
+                
+                  
+                  </div>
+               <!--    <div class="block">
+                    <button id="switchCameraButton">Switch Camera</button>
+                    <button id="changePreviewSize">Change Preview Size</button>
+                  </div> -->
+                </div>  
+            
+
+                <script src="js/camera.js"></script>   
+                <!-- <script src="js/cameraPreview.js"></script>    -->
+                <script src="js/navigasi.js"></script>   
+                <script src="js/nativedroid.script.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+

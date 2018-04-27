@@ -55,6 +55,14 @@
             {
               "xml": "<feature name=\"FilePath\"><param name=\"android-package\" value=\"com.hiddentao.cordova.filepath.FilePath\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"CameraPreview\"><param name=\"android-package\" value=\"com.cordovaplugincamerapreview.CameraPreview\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Base64ToGallery\"><param name=\"android-package\" value=\"it.nexxa.base64ToGallery.Base64ToGallery\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -88,7 +96,7 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 4
+              "count": 5
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
@@ -98,6 +106,26 @@
           "application": [
             {
               "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<activity android:name=\"com.cordovaplugincamerapreview.CameraActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/CameraPreviewTheme\" />",
               "count": 1
             }
           ]
@@ -137,6 +165,12 @@
       "PACKAGE_NAME": "com.sartika.telemetri3"
     },
     "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "com.sartika.telemetri3"
+    },
+    "cordova-base64-to-gallery": {
       "PACKAGE_NAME": "com.sartika.telemetri3"
     }
   },
@@ -446,6 +480,27 @@
       "clobbers": [
         "window.FilePath"
       ]
+    },
+    {
+      "id": "cordova-plugin-camera-preview.CameraPreview",
+      "file": "plugins/cordova-plugin-camera-preview/www/CameraPreview.js",
+      "pluginId": "cordova-plugin-camera-preview",
+      "clobbers": [
+        "CameraPreview"
+      ]
+    },
+    {
+      "id": "cordova-base64-to-gallery.object.assign-polyfill",
+      "file": "plugins/cordova-base64-to-gallery/www/object.assign-polyfill.js",
+      "pluginId": "cordova-base64-to-gallery"
+    },
+    {
+      "id": "cordova-base64-to-gallery.base64ToGallery",
+      "file": "plugins/cordova-base64-to-gallery/www/base64ToGallery.js",
+      "pluginId": "cordova-base64-to-gallery",
+      "clobbers": [
+        "cordova.base64ToGallery"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -459,6 +514,8 @@
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
     "cordova-plugin-camera": "4.0.2",
-    "cordova-plugin-filepath": "1.0.2"
+    "cordova-plugin-filepath": "1.0.2",
+    "cordova-plugin-camera-preview": "0.9.0",
+    "cordova-base64-to-gallery": "4.1.3"
   }
 }

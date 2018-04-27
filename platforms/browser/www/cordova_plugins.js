@@ -300,6 +300,27 @@ module.exports = [
         "id": "cordova-plugin-camera.CameraProxy",
         "pluginId": "cordova-plugin-camera",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-camera-preview/www/CameraPreview.js",
+        "id": "cordova-plugin-camera-preview.CameraPreview",
+        "pluginId": "cordova-plugin-camera-preview",
+        "clobbers": [
+            "CameraPreview"
+        ]
+    },
+    {
+        "file": "plugins/cordova-base64-to-gallery/www/object.assign-polyfill.js",
+        "id": "cordova-base64-to-gallery.object.assign-polyfill",
+        "pluginId": "cordova-base64-to-gallery"
+    },
+    {
+        "file": "plugins/cordova-base64-to-gallery/www/base64ToGallery.js",
+        "id": "cordova-base64-to-gallery.base64ToGallery",
+        "pluginId": "cordova-base64-to-gallery",
+        "clobbers": [
+            "cordova.base64ToGallery"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -315,7 +336,9 @@ module.exports.metadata =
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
     "cordova-plugin-camera": "4.0.2",
-    "cordova-plugin-filepath": "1.0.2"
+    "cordova-plugin-filepath": "1.0.2",
+    "cordova-plugin-camera-preview": "0.9.0",
+    "cordova-base64-to-gallery": "4.1.3"
 }
 // BOTTOM OF METADATA
 });
