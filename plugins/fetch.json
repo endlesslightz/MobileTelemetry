@@ -26,7 +26,7 @@
   "cordova-plugin-networking-bluetooth": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-networking-bluetooth"
+      "id": "cordova-plugin-networking-bluetooth@^1.0.3"
     },
     "is_top_level": true,
     "variables": {}

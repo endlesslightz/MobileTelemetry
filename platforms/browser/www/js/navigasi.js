@@ -10,7 +10,7 @@ function user(){
 }
 
 function kalender(){
-	$(location).attr('href',"calendar.html");			
+	$(location).attr('href',"kalender.html");			
 }
 
 function request(){
@@ -28,9 +28,9 @@ function riwayatCH(){
 function kamera(){
 	$(location).attr('href',"kamera.html");			
 }
-function kamera2(){
-	$(location).attr('href',"camera.html");			
-}
+// function kamera2(){
+// 	$(location).attr('href',"camera.html");			
+// }
 // function kamera3(){
 // 	$(location).attr('href',"cam2.html");			
 // }

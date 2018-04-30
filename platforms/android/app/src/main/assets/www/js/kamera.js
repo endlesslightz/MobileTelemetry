@@ -13,7 +13,8 @@ function cameraTakePicture() {
    navigator.camera.getPicture(onSuccess, onFail, {  
       quality: 50, 
       destinationType: Camera.DestinationType.DATA_URL ,
-      saveToPhotoAlbum: 'true'
+      saveToPhotoAlbum: 'true',
+      correctOrientation: 'true' 
 
    });  
    

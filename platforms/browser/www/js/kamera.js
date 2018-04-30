@@ -2,9 +2,9 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-  document.getElementById('myImage').src="../img/nopreview.jpg";
+  document.getElementById('myImage').src="img/nopreview.jpg";
   document.getElementById("myImage").width = window.screen.width; 
-  document.getElementById("myImage").height = window.screen.height/2; 
+  document.getElementById("myImage").height = window.screen.height*2/3; 
   document.getElementById("cameraTakePicture").addEventListener 
    ("click", cameraTakePicture); 
  }
@@ -13,7 +13,8 @@ function cameraTakePicture() {
    navigator.camera.getPicture(onSuccess, onFail, {  
       quality: 50, 
       destinationType: Camera.DestinationType.DATA_URL ,
-      saveToPhotoAlbum: 'true'
+      saveToPhotoAlbum: 'true',
+      correctOrientation: 'true' 
 
    });  
    

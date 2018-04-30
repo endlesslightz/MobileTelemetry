@@ -10,7 +10,7 @@ function user(){
 }
 
 function kalender(){
-	$(location).attr('href',"calendar.html");			
+	$(location).attr('href',"kalender.html");			
 }
 
 function request(){

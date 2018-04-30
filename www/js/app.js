@@ -351,6 +351,43 @@ function getDataTMA(){
 } 
 //------------------------------------------------------------------//
 
+function getDataKalender(){
+    var arraydata = [];
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+     if (filename=='kalender.html'){
+        myDB=window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
+        myDB.transaction(function(transaction) {
+          transaction.executeSql('SELECT * FROM data ORDER BY waktu desc', [], 
+          function (tx, results) {
+          var len = results.rows.length;
+              for (var i=0; i<len; ++i) {
+                  arraydata.push ({title: "data TMA", start: results.rows.item(i).waktu, backgroundColor : "#225588" });
+              } 
+              dataKalender = JSON.stringify(arraydata);
+              var date = new Date();
+              var d = date.getDate();
+              var m = date.getMonth();
+              var y = date.getFullYear();
+
+              $('#calendar').fullCalendar({
+                  height: 500,
+                  defaultView: 'month',
+                  defaultDate: date,
+                  editable: false,
+                  eventLimit: true, 
+                  timeFormat: 'H:mm',        
+                  eventTextColor: '#ffffff',
+                  events: arraydata
+              });
+          },
+          function(error) {
+            alert("Ups, terjadi kesalahan pada pengambilan data!");
+            console.log('nama ga update');
+          });
+        });
+    }
+}
 
 //------------------------------------------------------------------//
 
@@ -358,6 +395,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
   getData();
+  getDataKalender();
 	document.addEventListener("online", onOnline, false);
 	document.addEventListener("offline", onOffline, false);
 	onOnline();
